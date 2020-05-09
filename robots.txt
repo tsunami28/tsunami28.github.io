@@ -4,9 +4,6 @@ Disallow: /images/
 Disallow: /js/
 Disallow: /css/
 
-User-agent: Twitterbot
-Allow: /images/
-
 User-agent: MJ12bot
 Disallow: /
 
