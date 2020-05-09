@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Docker - Tag - Doctor Solution</title>
+        <link>https://doctorsolution.xyz/tags/docker/</link>
+        <description>Docker - Tag - Doctor Solution</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 20 Oct 2019 02:13:00 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>How to load test websites?</title>
+    <link>https://doctorsolution.xyz/how_to_load_test_websites/</link>
+    <pubDate>Sun, 20 Oct 2019 02:13:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/how_to_load_test_websites/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/webchart.webp" referrerpolicy="no-referrer">
+            </div><!-- Your front matter up here -->
+<p>Does your company care about their website? Do you have clients that are doing business over their websites? Are you ready for the upcoming Black Friday?</p>
+<p>At this moment you should pay attention if your website and infrastructure behind it are ready to endure.</p>]]></description>
+</item></channel>
+</rss>

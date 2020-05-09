@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Doctor Solution</title>
-        <link>https://doctorsolution.xyz/</link>
-        <description>Doctor Solution</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 17 Feb 2020 22:47:36 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/" rel="self" type="application/rss+xml" /><item>
+        <title>PowerShell - Tag - Doctor Solution</title>
+        <link>https://doctorsolution.xyz/tags/powershell/</link>
+        <description>PowerShell - Tag - Doctor Solution</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 May 2020 21:16:50 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/tags/powershell/" rel="self" type="application/rss+xml" /><item>
     <title>Mighty Azure portal vol1</title>
     <link>https://doctorsolution.xyz/mighty_azure_portal_vol1/</link>
     <pubDate>Fri, 08 May 2020 21:16:50 &#43;0200</pubDate>
@@ -21,16 +21,5 @@ With PowerShell 2 came PS remoting, so we were able to execute commands on other
     <guid>https://doctorsolution.xyz/azure_application_gateway_reconfiguration/</guid>
     <description><![CDATA[<!-- Your front matter up here -->
 <p>Azure team is doing great job with giving us a chance to change more and more options for different services via gui. Application gateway is one of them. But what when you need to implement any kind of automation, IaC ? Here, I still rely on PowerShell.</p>]]></description>
-</item><item>
-    <title>How to load test websites?</title>
-    <link>https://doctorsolution.xyz/how_to_load_test_websites/</link>
-    <pubDate>Sun, 20 Oct 2019 02:13:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://doctorsolution.xyz/how_to_load_test_websites/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/webchart.webp" referrerpolicy="no-referrer">
-            </div><!-- Your front matter up here -->
-<p>Does your company care about their website? Do you have clients that are doing business over their websites? Are you ready for the upcoming Black Friday?</p>
-<p>At this moment you should pay attention if your website and infrastructure behind it are ready to endure.</p>]]></description>
 </item></channel>
 </rss>

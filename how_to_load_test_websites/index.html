@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How to load test websites? - Doctor Solution</title>
+        <meta name="Description" content="This is a first post"><meta property="og:title" content="How to load test websites?" />
+<meta property="og:description" content="This is a first post" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doctorsolution.xyz/how_to_load_test_websites/" />
+<meta property="article:published_time" content="2019-10-20T02:13:00+02:00" />
+<meta property="article:modified_time" content="2019-10-20T02:13:00+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to load test websites?"/>
+<meta name="twitter:description" content="This is a first post"/>
+<meta name="application-name" content="Doctor Solution">
+<meta name="apple-mobile-web-app-title" content="Doctor Solution"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://doctorsolution.xyz/how_to_load_test_websites/" /><link rel="next" href="https://doctorsolution.xyz/azure_application_gateway_reconfiguration/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to load test websites?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/doctorsolution.xyz\/how_to_load_test_websites\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/doctorsolution.xyz\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Azure, Docker, IIS, Load Test","wordcount":  474 ,
+        "url": "https:\/\/doctorsolution.xyz\/how_to_load_test_websites\/","datePublished": "2019-10-20T02:13:00+02:00","dateModified": "2019-10-20T02:13:00+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/doctorsolution.xyz\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Milos Katinski"
+            },"description": "This is a first post"
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Doctor Solution">Doctor Solution</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Doctor Solution">Doctor Solution</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">How to load test websites?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tips-and-tricks/">
+                                <i class="far fa-folder fa-fw"></i>Tips and Tricks
+                            </a>&nbsp;<a href="/categories/azure/">
+                                <i class="far fa-folder fa-fw"></i>Azure
+                            </a>&nbsp;<a href="/categories/how-to-configure/">
+                                <i class="far fa-folder fa-fw"></i>How to configure
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-10-20>2019-10-20</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 474 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading/normal.min.svg"
+        data-src="/images/webchart.webp"
+        data-srcset="/images/webchart.webp, /images/webchart.webp 1.5x, /images/webchart.webp 2x"
+        data-sizes="auto"
+        alt="This is a first post"
+        title="This is a first post" /></div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><!-- Your front matter up here -->
+<p>Does your company care about their website? Do you have clients that are doing business over their websites? Are you ready for the upcoming Black Friday?</p>
+<p>At this moment you should pay attention if your website and infrastructure behind it are ready to endure.</p>
+<p>Among all the great commercial tools lies the jewel which is free :) The solution that I will present in the next few lines can be run from your local workstation (we have decided to take it to the cloud).</p>
+<p>I&rsquo;m presenting you <a href="https://gettaurus.org/" target="_blank" rel="noopener noreffer">Taurus</a>. We have used this tool with JMeter scripts to accomplish our goal.</p>
+<p>Since we decided to run everything in the cloud (Azure) we needed a Linux VM that will host our project. We went with CentOS 7.</p>
+<p>As we are using it in some other projects, we decided to go with a <a href="https://hub.docker.com/r/blazemeter/taurus/" target="_blank" rel="noopener noreffer">Docker version</a>. So, after installing Linux, you need to install Docker and grab the Taurus image.</p>
+<p>Since I wanted to use scripts that were uploaded locally, I had to mount a specific folder during the Docker run. At that point, I found out that I have an issue with rights on it. After a short search, I found an old friend to be a problem - SELinux. You can play with giving certain rights, but I just &ldquo;kill&rdquo; it.</p>
+<p>What would be the use of a test if we couldn&rsquo;t create a report? Well, JMeter has a built-in function for creating very nice HTML reports, but in the local folder. Since this is run in Docker, we needed to find a way to extract the report. Yes, I know I already mounted Linux local folder, but I don&rsquo;t want to SSH to it to grab it and it also gets powered off after a test (automatically). This is where we decided to mount one more thing - Azure Storage File Share.</p>
+<p>Mount Azure File Share in Linux -&gt; <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mount-azure-file-storage-on-linux-using-smb">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mount-azure-file-storage-on-linux-using-smb</a></p>
+<ul>
+<li>Command example – mind the bolded variables:
+sudo mount -t cifs //StorageAccountName.file.core.windows.net/FileShareName /home/taurus-admin/TaurusLoadTesting/report/ -o vers=3.0,username=StorageAccountName,password=”StorageAccountAccessKey”, dir_mode=0777,file_mode=0777,serverino</li>
+</ul>
+<p>So, after creating File Share we were ready to run our Docker.</p>
+<p>Here&rsquo;s the final command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo docker run -it --rm -v ~/TaurusLoadTesting:/TaurusLoadTesting blazemeter/taurus /TaurusLoadTesting/profile/sanity.yml /TaurusLoadTesting/common/scenarios.yml /TaurusLoadTesting/variable/development.yml
+</code></pre></td></tr></table>
+</div>
+</div><p>Let me break this to pieces for you:</p>
+<ul>
+<li>We are running the image interactively with remove command after it finishes the job</li>
+<li>We are mounting local Linux folder to Docker image (previously we mounted Azure FS inside the same folder)</li>
+<li>Yaml files that we are calling are partially mandatory - Scenario one is. The rest is part of our playing and making things more complicated :)</li>
+</ul>
+<p>If you were previously playing with JMeter this shouldn&rsquo;t be a big problem for you to implement. If not, feel free to contact me and I will send you the complete example template for testing.</p>
+<p>Now you may relax and enjoy shopping in November ;)</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2019-10-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/how_to_load_test_websites/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://doctorsolution.xyz/how_to_load_test_websites/" data-title="How to load test websites?" data-via="MilosKatinski" data-hashtags="Azure,Docker,IIS,Load Test"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://doctorsolution.xyz/how_to_load_test_websites/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://doctorsolution.xyz/how_to_load_test_websites/"><i class="fab fa-reddit fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/azure/">Azure</a>,&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/iis/">IIS</a>,&nbsp;<a href="/tags/load-test/">Load Test</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/azure_application_gateway_reconfiguration/" class="next" rel="next" title="Azure Application Gateway Reconfiguration">Azure Application Gateway Reconfiguration<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

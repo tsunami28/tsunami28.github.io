@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Doctor Solution</title>
-        <link>https://doctorsolution.xyz/</link>
-        <description>Doctor Solution</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 17 Feb 2020 22:47:36 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/" rel="self" type="application/rss+xml" /><item>
+        <title>Tips and Tricks - Category - Doctor Solution</title>
+        <link>https://doctorsolution.xyz/categories/tips-and-tricks/</link>
+        <description>Tips and Tricks - Category - Doctor Solution</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 May 2020 21:16:50 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/tips-and-tricks/" rel="self" type="application/rss+xml" /><item>
     <title>Mighty Azure portal vol1</title>
     <link>https://doctorsolution.xyz/mighty_azure_portal_vol1/</link>
     <pubDate>Fri, 08 May 2020 21:16:50 &#43;0200</pubDate>
