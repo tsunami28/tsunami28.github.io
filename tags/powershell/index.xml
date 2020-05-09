@@ -11,7 +11,7 @@
     <author>Author</author>
     <guid>https://doctorsolution.xyz/mighty_azure_portal_vol1/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/azure_logo.webp" referrerpolicy="no-referrer">
+                <img src="/images/Mighty_Azure_portal_vol1/featured-image.webp" referrerpolicy="no-referrer">
             </div><!-- Your front matter up here -->
 <p>How many times did you find yourself in need to do some repetitive tasks on Windows Servers? Since 2006. when PowerShell first appeared, a lot has changed. We&rsquo;ve been writing scripts, functions, and all the code that could help us in order to ease some Admin pain and speed up things.
 With PowerShell 2 came PS remoting, so we were able to execute commands on other servers too.</p>
@@ -22,7 +22,9 @@ With PowerShell 2 came PS remoting, so we were able to execute commands on other
     <pubDate>Sun, 16 Feb 2020 13:15:03 &#43;0100</pubDate>
     <author>Author</author>
     <guid>https://doctorsolution.xyz/azure_application_gateway_reconfiguration/</guid>
-    <description><![CDATA[<!-- Your front matter up here -->
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp" referrerpolicy="no-referrer">
+            </div><!-- Your front matter up here -->
 <p>Azure team is doing great job with giving us a chance to change more and more options for different services via gui. Application gateway is one of them. But what when you need to implement any kind of automation, IaC ? Here, I still rely on PowerShell.</p>]]></description>
 </item></channel>
 </rss>

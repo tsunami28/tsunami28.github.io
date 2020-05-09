@@ -11,9 +11,12 @@
 Azure team is doing great job with giving us a chance to change more and more options for different services via gui. Application gateway is one of them. But what when you need to implement any kind of automation, IaC ? Here, I still rely on PowerShell." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://doctorsolution.xyz/azure_application_gateway_reconfiguration/" />
+<meta property="og:image" content="https://doctorsolution.xyz/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp" />
 <meta property="article:published_time" content="2020-02-16T13:15:03+01:00" />
-<meta property="article:modified_time" content="2020-05-09T03:11:39+02:00" />
-<meta name="twitter:card" content="summary"/>
+<meta property="article:modified_time" content="2020-05-09T23:46:07+02:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://doctorsolution.xyz/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp"/>
+
 <meta name="twitter:title" content="Azure Application Gateway Reconfiguration"/>
 <meta name="twitter:description" content="
 Azure team is doing great job with giving us a chance to change more and more options for different services via gui. Application gateway is one of them. But what when you need to implement any kind of automation, IaC ? Here, I still rely on PowerShell."/>
@@ -34,8 +37,8 @@ Azure team is doing great job with giving us a chance to change more and more op
                 "url": "https:\/\/doctorsolution.xyz\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "Azure, PowerShell","wordcount":  293 ,
-        "url": "https:\/\/doctorsolution.xyz\/azure_application_gateway_reconfiguration\/","datePublished": "2020-02-16T13:15:03+01:00","dateModified": "2020-05-09T03:11:39+02:00","publisher": {
+            },"genre": "posts","keywords": "Azure, PowerShell","wordcount":  335 ,
+        "url": "https:\/\/doctorsolution.xyz\/azure_application_gateway_reconfiguration\/","datePublished": "2020-02-16T13:15:03+01:00","dateModified": "2020-05-09T23:46:07+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -90,7 +93,7 @@ Azure team is doing great job with giving us a chance to change more and more op
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Azure Application Gateway Reconfiguration</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;
                     <span class="post-category">included in<a href="/categories/tips-and-tricks/">
                                 <i class="far fa-folder fa-fw"></i>Tips and Tricks
                             </a>&nbsp;<a href="/categories/azure/">
@@ -99,9 +102,16 @@ Azure team is doing great job with giving us a chance to change more and more op
                                 <i class="far fa-folder fa-fw"></i>How to configure
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-16>2020-02-16</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 293 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 335 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading/normal.min.svg"
+        data-src="/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp"
+        data-srcset="/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp, /images/Azure_Application_Gateway_Reconfiguration/featured-image.webp 1.5x, /images/Azure_Application_Gateway_Reconfiguration/featured-image.webp 2x"
+        data-sizes="auto"
+        alt="/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp"
+        title="/images/Azure_Application_Gateway_Reconfiguration/featured-image.webp" /></div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -112,9 +122,53 @@ Azure team is doing great job with giving us a chance to change more and more op
 <p>In one of the projects I&rsquo;m working on we needed to &ldquo;reinvent&rdquo; Blue-Green type of deployment for IaaS type of environment. We had 2 or more VMs in one backend pool of the Application Gateway.</p>
 <p>In order to deploy code to only one VM without affecting production environment and what we serve to the clients, we decided to do it the way so we remove 1 VM from backend pool and push the code to it.</p>
 <p>Easy task if you wanna do it manually each time with Application gateway. For IaC PowerShell to the rescue :)</p>
-<details>
-    <summary markdown="span">Set-AzAppGw.ps1</summary>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="k">function</span> <span class="nb">Set-AzAppGw</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="k">function</span> <span class="nb">Set-AzAppGw</span> <span class="p">{</span>
     <span class="p">[</span><span class="k">CmdletBinding</span><span class="p">()]</span>
     <span class="k">param</span> <span class="p">(</span>
         <span class="c"># Application Gateway name</span>
@@ -148,16 +202,17 @@ Azure team is doing great job with giving us a chance to change more and more op
             <span class="c"># Setting up new BackendAddressPool</span>
             <span class="no">[void]</span><span class="p">(</span><span class="nb">Set-AzApplicationGatewayBackendAddressPool</span> <span class="n">-ApplicationGateway</span> <span class="nv">$Gw</span> <span class="p">`</span>
               <span class="n">-backendipaddresses</span> <span class="nv">$NewIpList</span> <span class="n">-Name</span> <span class="nv">$BackendName</span><span class="p">)</span>
-            <span class="c"># This command actually configures Application Gateway with previously preparedchanges</span>
+            <span class="c"># This command actually configures Application Gateway with previously prepared changes</span>
             <span class="no">[void]</span><span class="p">(</span><span class="nb">Set-AzApplicationGateway</span> <span class="n">-ApplicationGateway</span> <span class="nv">$gw</span><span class="p">)</span>
         <span class="p">}</span>
         <span class="k">catch</span> <span class="p">{</span>
             <span class="nb">Write-error</span> <span class="s2">&#34;$_&#34;</span> <span class="n">-ErrorAction</span> <span class="n">stop</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-</details>
-<br/></div><div class="post-footer" id="post-footer">
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -197,7 +252,7 @@ Azure team is doing great job with giving us a chance to change more and more op
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":0},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

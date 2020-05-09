@@ -17,22 +17,19 @@ After enabling this option, you will have an object that you can add in KeyVault
 
 Now, in already mentioned VM Run Command we should be able to execute the script.
 
-<details>
-    <summary markdown="span">Add-AzureVMLocalUser.ps1</summary>
-
-{{< highlight powershell "linenos=false" >}}
+```PowerShell
 <# If you haven't previously logged to VM and install any module, this is mandatory,else
 our script will hang forever because "Run Command" doesn't ask for confirmation when needed #>
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
-<#This command is needed on Windows Server 2016 - You will first have to install Nuget package
+<# This command is needed on Windows Server 2016 - You will first have to install Nuget package
 which is refusing default Tls1.0 #>
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 
 Install-Module Az
 
-<#Here we use previously enabled Managed identity to login to our Azure subscription #>
+<# Here we use previously enabled Managed identity to login to our Azure subscription #>
 Connect-AzAccount -Identity
 
 $vaultName = "ENTER VAULT NAME HERE"
@@ -51,9 +48,7 @@ $dateExpire = $date.AddDays(35)
 New-LocalUser -Name $username -Password $secpasswd -AccountExpires $dateExpire
 
 Add-LocalGroupMember -Group "Administrators" -Member $username
-{{< /highlight >}}
-
-</details>
+```
 
 If you have a certain naming convention for Username and Password data in KeyVault, you can grab multiple secrets and with a simple "foreach" push n users to a VM.
 Smooth, isn't it :)

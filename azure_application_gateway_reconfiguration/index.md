@@ -13,10 +13,7 @@ In order to deploy code to only one VM without affecting production environment 
 
 Easy task if you wanna do it manually each time with Application gateway. For IaC PowerShell to the rescue :)
 
-<details>
-    <summary markdown="span">Set-AzAppGw.ps1</summary>
-
-{{< highlight powershell "linenos=false" >}}
+```PowerShell
 function Set-AzAppGw {
     [CmdletBinding()]
     param (
@@ -51,7 +48,7 @@ function Set-AzAppGw {
             # Setting up new BackendAddressPool
             [void](Set-AzApplicationGatewayBackendAddressPool -ApplicationGateway $Gw `
               -backendipaddresses $NewIpList -Name $BackendName)
-            # This command actually configures Application Gateway with previously preparedchanges
+            # This command actually configures Application Gateway with previously prepared changes
             [void](Set-AzApplicationGateway -ApplicationGateway $gw)
         }
         catch {
@@ -59,8 +56,5 @@ function Set-AzAppGw {
         }
     }
 }
-{{< /highlight >}}
-
-</details>
-<br/>
+```
 
