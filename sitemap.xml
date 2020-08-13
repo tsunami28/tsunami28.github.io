@@ -2,17 +2,19 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://doctorsolution.xyz/tags/azure/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://doctorsolution.xyz/categories/azure/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://doctorsolution.xyz/categories/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/tags/azure/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/categories/azure/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/categories/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/posts/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/tags/sql/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/sql-horror-story/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://doctorsolution.xyz/tags/</loc><lastmod>2020-08-13T12:30:40&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/categories/how-to-configure/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/mighty_azure_portal_vol1/</loc><lastmod>2020-05-09T23:46:07&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://doctorsolution.xyz/posts/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/tags/powershell/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://doctorsolution.xyz/tags/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/categories/tips-and-tricks/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/about/</loc><lastmod>2020-05-09T03:11:39&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://doctorsolution.xyz/</loc><lastmod>2020-05-09T03:11:39&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/azure_application_gateway_reconfiguration/</loc><lastmod>2020-05-10T00:10:10&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/tags/docker/</loc><lastmod>2020-05-09T23:46:07&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://doctorsolution.xyz/how_to_load_test_websites/</loc><lastmod>2020-05-09T23:46:07&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

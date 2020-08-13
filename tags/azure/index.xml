@@ -4,7 +4,18 @@
         <link>https://doctorsolution.xyz/tags/azure/</link>
         <description>Azure - Tag - Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Fri, 08 May 2020 21:16:50 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/tags/azure/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 13 Aug 2020 11:09:38 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/tags/azure/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL Horror Story</title>
+    <link>https://doctorsolution.xyz/sql-horror-story/</link>
+    <pubDate>Thu, 13 Aug 2020 11:09:38 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/sql-horror-story/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/SQL-Horror-Story/featured-image.webp" referrerpolicy="no-referrer">
+            </div><p>For the past 8 months I&rsquo;ve been working on an Azure project for a financial institution. I&rsquo;ve never imagined so many security and compliancy checks. The team did a great job - we passed all advisory scans with high grades and were ready to go live in a couple of days.</p>
+<p>Important part of the infrastructure was relying on <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview" target="_blank" rel="noopener noreffer">Azure SQL</a>.
+Monday morning. I&rsquo;ve made myself a cup of coffee and logged in to the portal and systems to do a base check once again. And this is where our story begins.</p>]]></description>
+</item><item>
     <title>Mighty Azure portal vol1</title>
     <link>https://doctorsolution.xyz/mighty_azure_portal_vol1/</link>
     <pubDate>Fri, 08 May 2020 21:16:50 &#43;0200</pubDate>
