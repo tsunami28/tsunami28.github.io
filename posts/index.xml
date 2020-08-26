@@ -4,7 +4,16 @@
         <link>https://doctorsolution.xyz/posts/</link>
         <description>All Posts | Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 13 Aug 2020 11:09:38 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Wed, 26 Aug 2020 09:26:50 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL-Horror-Story-Part2</title>
+    <link>https://doctorsolution.xyz/sql-horror-story-part2/</link>
+    <pubDate>Wed, 26 Aug 2020 09:26:50 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/sql-horror-story-part2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/SQL-Horror-Story-part2/featured-image.webp" referrerpolicy="no-referrer">
+            </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
+</item><item>
     <title>SQL Horror Story</title>
     <link>https://doctorsolution.xyz/sql-horror-story/</link>
     <pubDate>Thu, 13 Aug 2020 11:09:38 &#43;0200</pubDate>
