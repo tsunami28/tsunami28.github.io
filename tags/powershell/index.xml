@@ -11,7 +11,7 @@
     <author>Author</author>
     <guid>https://doctorsolution.xyz/sql-horror-story-part2/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/SQL-Horror-Story-Part2/featured-image.webp" referrerpolicy="no-referrer">
+                <img src="/images/SQL-Horror-Story-part2/featured-image.webp" referrerpolicy="no-referrer">
             </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
 </item><item>
     <title>Mighty Azure portal vol1</title>

@@ -4,14 +4,25 @@
         <link>https://doctorsolution.xyz/posts/</link>
         <description>All Posts | Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Wed, 26 Aug 2020 09:26:50 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Wed, 23 Sep 2020 20:55:16 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Mighty Azure portal vol2</title>
+    <link>https://doctorsolution.xyz/mighty_azure_portal_vol2/</link>
+    <pubDate>Wed, 23 Sep 2020 20:55:16 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/mighty_azure_portal_vol2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/Mighty_Azure_portal_vol2/featured-image.webp" referrerpolicy="no-referrer">
+            </div><p>Providing good billing overview and reports for customers through CSP is still not fully integrated in either MSP or Azure portal. That&rsquo;s why most providers use 3rd party solutions.
+Browsing through one of those for a client I noticed strange reports for a month or two. 
+We implemented Azure SQL with Elastic Pool. Great thing with EP is that you pay just for selected DTU and you may create <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/resource-limits-dtu-elastic-pools" target="_blank" rel="noopener noreffer">&ldquo;unlimited&rdquo;</a> number of databases. But, if you create a new database and don&rsquo;t add it to the pool, it will be billed separately.</p>]]></description>
+</item><item>
     <title>SQL-Horror-Story-Part2</title>
     <link>https://doctorsolution.xyz/sql-horror-story-part2/</link>
     <pubDate>Wed, 26 Aug 2020 09:26:50 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://doctorsolution.xyz/sql-horror-story-part2/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/SQL-Horror-Story-Part2/featured-image.webp" referrerpolicy="no-referrer">
+                <img src="/images/SQL-Horror-Story-part2/featured-image.webp" referrerpolicy="no-referrer">
             </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
 </item><item>
     <title>SQL Horror Story</title>
