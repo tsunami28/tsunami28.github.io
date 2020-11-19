@@ -4,7 +4,14 @@
         <link>https://doctorsolution.xyz/categories/azure/</link>
         <description>Azure - Category - Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Wed, 23 Sep 2020 20:55:16 &#43;0200</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/azure/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/azure/" rel="self" type="application/rss+xml" /><item>
+    <title>How-to-Secure-Your-Network</title>
+    <link>https://doctorsolution.xyz/how-to-secure-your-network/</link>
+    <pubDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/how-to-secure-your-network/</guid>
+    <description><![CDATA[<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
+</item><item>
     <title>Mighty Azure portal vol2</title>
     <link>https://doctorsolution.xyz/mighty_azure_portal_vol2/</link>
     <pubDate>Wed, 23 Sep 2020 20:55:16 &#43;0200</pubDate>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Networking - Tag - Doctor Solution</title>
+        <link>https://doctorsolution.xyz/tags/networking/</link>
+        <description>Networking - Tag - Doctor Solution</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/tags/networking/" rel="self" type="application/rss+xml" /><item>
+    <title>How-to-Secure-Your-Network</title>
+    <link>https://doctorsolution.xyz/how-to-secure-your-network/</link>
+    <pubDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/how-to-secure-your-network/</guid>
+    <description><![CDATA[<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
+</item></channel>
+</rss>

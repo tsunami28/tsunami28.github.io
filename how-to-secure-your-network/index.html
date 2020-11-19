@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How-to-Secure-Your-Network - Doctor Solution</title><meta name="Description" content=""><meta property="og:title" content="How-to-Secure-Your-Network" />
+<meta property="og:description" content="Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doctorsolution.xyz/how-to-secure-your-network/" />
+<meta property="og:image" content="https://doctorsolution.xyz/images/How-To-Secure-Your-Network/featured-image.webp" />
+<meta property="article:published_time" content="2020-11-19T10:40:59+01:00" />
+<meta property="article:modified_time" content="2020-11-19T10:40:59+01:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://doctorsolution.xyz/images/How-To-Secure-Your-Network/featured-image.webp"/>
+
+<meta name="twitter:title" content="How-to-Secure-Your-Network"/>
+<meta name="twitter:description" content="Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints."/>
+<meta name="application-name" content="Doctor Solution">
+<meta name="apple-mobile-web-app-title" content="Doctor Solution"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://doctorsolution.xyz/how-to-secure-your-network/" /><link rel="prev" href="https://doctorsolution.xyz/mighty_azure_portal_vol2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How-to-Secure-Your-Network",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/doctorsolution.xyz\/how-to-secure-your-network\/"
+        },"genre": "posts","keywords": "Azure, Networking, Security","wordcount":  530 ,
+        "url": "https:\/\/doctorsolution.xyz\/how-to-secure-your-network\/","datePublished": "2020-11-19T10:40:59+01:00","dateModified": "2020-11-19T10:40:59+01:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
+                "@type": "Person",
+                "name": "Milos Katinski"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Doctor Solution">Doctor Solution</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Doctor Solution">Doctor Solution</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">How-to-Secure-Your-Network</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-19">2020-11-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;530 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>
+<p>Let&rsquo;s start with building the initial services we need for this POC:</p>
+<ol>
+<li>Resource group for our POC (consider everything below to be created inside this RG)</li>
+<li>Virtual network with 2 subnets (one will be used for VM and the other one later on for Private Endpoint)</li>
+<li>Network Security Group - connected to our VM subnet allowing RDP from only mine/yours Public IP</li>
+<li>Virtual machine (I used Win10 with public IP)</li>
+<li>Storage Account - during creation choose &ldquo;Public access from all networks&rdquo;</li>
+</ol>
+<p>After creating all these, we need our Storage account Blob service URL (You will find it under Properties).</p>
+<p>Next step is to connect to our VM and check how it resolves Blob Service URL. You should get something like this (notice that it has Public IP!):</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_215.png"/> <figcaption>
+            <h4>Blob Public IP</h4>
+        </figcaption>
+</figure>
+
+<p>Now if we use Network Watcher to check Next hop we get this:</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_216.png"/> <figcaption>
+            <h4>Next Hop</h4>
+        </figcaption>
+</figure>
+
+<p>You will notice that we are accessing our Blob over its public point via Internet. If you haven&rsquo;t enabled only https access, we already have a big security issue potentialy sending data unencrypted over the Internet!</p>
+<p>Let us now use first option to secure our access - <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview" target="_blank" rel="noopener noreffer">Service Endpoint.</a></p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_217.png"/> <figcaption>
+            <h4>Enabling Service endpoint on subnet in VNet</h4>
+        </figcaption>
+</figure>
+
+<p>As stated in docs it will allow us to reach our Azure service without needing a public IP address on the VNet. The thing is that resolution is still the same, so the final access to the service is still over its public IP.</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_218.png"/> <figcaption>
+            <h4>Change in the Next Hop</h4>
+        </figcaption>
+</figure>
+
+<p>Latest implemented security option for most of the services in Azure is now <a href="https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview" target="_blank" rel="noopener noreffer">Private Endpoint.</a></p>
+<p>In order to use it there are some prerequisites:</p>
+<ol>
+<li>We need VNet subnet dedicated for it (best pactise if you ask me)</li>
+<li>Private DNS zone - It will host our Private endpoints A records</li>
+</ol>
+<p>Private endpoint is created per service, so we need to initiate its creation from our Storage account settings. During the creation we will be asked about DNS zone (it can create it for us if we don&rsquo;t have it yet) which is highly recomended.</p>
+<p>Now, after creating it, let&rsquo;s see how we resolve our Blob from VM:</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_219.png"/> <figcaption>
+            <h4>Blob Private IP</h4>
+        </figcaption>
+</figure>
+
+<p>We can confirm the same looking at the DNS zone:</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_220.png"/> <figcaption>
+            <h4>DNS record</h4>
+        </figcaption>
+</figure>
+
+<p>As you can see, our Blob now has private IP assigned from our VNet subnet.</p>
+<p>And the final step is to test Next hop with Network Watcher:</p>
+<figure>
+    <img src="/images/How-To-Secure-Your-Network/Screenshot_221.png"/> <figcaption>
+            <h4>Fully secured from the Network flow perspective</h4>
+        </figcaption>
+</figure>
+
+<p>Don&rsquo;t forget to additionally set, in this case, Storage Account Firewall settings. Only then you will be fully secured.</p>
+<p>And to conclude this, I strongly believe that there is no reason NOT to use Private endpoints. They will allow you to use your internal IP address spacing and thus integrate more security while accessing Azure services. You will also use full potential of the Azure backbone network since network traffic won&rsquo;t &ldquo;leave&rdquo; it.</p>
+<p>P.S. Don&rsquo;t forget to delete previously created RG in order to save money 😄</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-11-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/how-to-secure-your-network/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://doctorsolution.xyz/how-to-secure-your-network/" data-title="How-to-Secure-Your-Network" data-via="MilosKatinski" data-hashtags="Azure,Networking,Security"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://doctorsolution.xyz/how-to-secure-your-network/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://doctorsolution.xyz/how-to-secure-your-network/"><i class="fab fa-reddit fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/azure/">Azure</a>,&nbsp;<a href="/tags/networking/">Networking</a>,&nbsp;<a href="/tags/security/">Security</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/mighty_azure_portal_vol2/" class="prev" rel="prev" title="Mighty Azure portal vol2"><i class="fas fa-angle-left fa-fw"></i>Mighty Azure portal vol2</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":0},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-64641779-2', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-64641779-2" async></script></body>
+</html>
