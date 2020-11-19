@@ -10,6 +10,10 @@
     <pubDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</pubDate>
     <author>Author</author>
     <guid>https://doctorsolution.xyz/how-to-secure-your-network/</guid>
-    <description><![CDATA[<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
+    <description><![CDATA[<figure>
+     
+</figure>
+
+<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
 </item></channel>
 </rss>

@@ -1,5 +1,7 @@
 # How-to-Secure-Your-Network
 
+{{< figure src="/images/How-To-Secure-Your-Network/featured-image.webp" width="30%" >}}
+
 Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.
 <!--more-->
 Let's start with building the initial services we need for this POC:
