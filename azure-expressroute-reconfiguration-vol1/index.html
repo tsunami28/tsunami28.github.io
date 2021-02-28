@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Azure ExpressRoute Reconfiguration Vol1 - Doctor Solution</title><meta name="description" content=""><meta property="og:title" content="Azure ExpressRoute Reconfiguration Vol1" />
+<meta property="og:description" content="Recently I was working on an assignment, that at the start seemed like an easy one. We had to redeploy ExpressRoute Circuit which required that we first remove all the connections towards that Circuit. An important thing to mention is that all is done via Azure DevOps release pipelines and that the parameter we had to use is the circuit name." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/" /><meta property="og:image" content="https://doctorsolution.xyz/images/Azure-ExpressRoute-Reconfiguration-vol1/featured-image.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-28T15:00:00&#43;01:00" />
+<meta property="article:modified_time" content="2021-02-28T10:51:23&#43;01:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://doctorsolution.xyz/images/Azure-ExpressRoute-Reconfiguration-vol1/featured-image.webp"/>
+
+<meta name="twitter:title" content="Azure ExpressRoute Reconfiguration Vol1"/>
+<meta name="twitter:description" content="Recently I was working on an assignment, that at the start seemed like an easy one. We had to redeploy ExpressRoute Circuit which required that we first remove all the connections towards that Circuit. An important thing to mention is that all is done via Azure DevOps release pipelines and that the parameter we had to use is the circuit name."/>
+<meta name="application-name" content="Doctor Solution">
+<meta name="apple-mobile-web-app-title" content="Doctor Solution"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/" /><link rel="prev" href="https://doctorsolution.xyz/how-to-secure-your-network/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Azure ExpressRoute Reconfiguration Vol1",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/doctorsolution.xyz\/azure-expressroute-reconfiguration-vol1\/"
+        },"genre": "posts","keywords": "Azure, Networking","wordcount":  618 ,
+        "url": "https:\/\/doctorsolution.xyz\/azure-expressroute-reconfiguration-vol1\/","datePublished": "2021-01-28T15:00:00+01:00","dateModified": "2021-02-28T10:51:23+01:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
+                "@type": "Person",
+                "name": "Milos Katinski"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Doctor Solution">Doctor Solution</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Doctor Solution">Doctor Solution</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Azure ExpressRoute Reconfiguration Vol1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreferrer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-28">2021-01-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;618 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>Recently I was working on an assignment, that at the start seemed like an easy one. We had to redeploy ExpressRoute Circuit which required that we first remove all the connections towards that Circuit. An important thing to mention is that all is done via Azure DevOps release pipelines and that the parameter we had to use is the circuit name.</p>
+<figure>
+    <img src="/images/Azure-ExpressRoute-Reconfiguration-vol1/ERCircuit.jpg" width="40%"/> 
+</figure>
+
+<p>As I like to use it, and I have some experience with it, my first weapon of choice was PowerShell and Az module.
+So, I started with <code>Get-AzExpressRouteCircuit</code> command. When I looked at the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.commands.network.models.psexpressroutecircuit?view=azurerm-ps#properties" target="_blank" rel="noopener noreferrer">properties</a> for the output object I realized that there is nothing about the connections in it (at least not the ones we needed).</p>
+<p>OK, let us look at the <code>Get-AzExpressRouteConnection</code>. It requires info about ExpressRouteGateway. Wait. What? But we are using Virtual Network Gateways. Is that the same?! You&rsquo;re already guessing - it&rsquo;s not. ExpressRouteGateway gets created within Virtual Hub, which is part of the great Azure service - <a href="https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about" target="_blank" rel="noopener noreferrer">Virtual WAN</a>. But we are still not using that one, but plain and simple Hub and Spoke topology in combination with Virtual Network Gateways.</p>
+<p>Since ExpressRoute commands were not helping me, I decided to approach this from the other side - the connection one. What I know about them:</p>
+<ul>
+<li>They are created as part of the Virtual Network Gateway</li>
+<li>I could find their names (multiple connections)</li>
+<li>I could get the VNGW name</li>
+</ul>
+<p>Remember at the beginning I mentioned that all is run from the pipeline where I want to pass only ER Circuit name. Now I had to find a correlation between connections and circuits that I could filter by (just because I have multiple circuits and I cannot delete just any connection).</p>
+<p>Now I decided to try these two commands: <code>Get-AzVirtualNetworkGateway</code> and <code>Get-AzVirtualNetworkGatewayConnection</code>.
+If we look at the <a href="Get-AzVirtualNetworkGatewayConnection" rel="">properties</a> of the output object for the first command, we may notice that there is no mention of the ExpressRoute Circuit(s) that it&rsquo;s used for. Browsing the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.commands.network.models.psvirtualnetworkgatewayconnection?view=azurerm-ps#properties" target="_blank" rel="noopener noreferrer">properties</a> for the second one I had more luck. The &ldquo;PeerText&rdquo; property is caring the ID of the circuit that the connection is used for.</p>
+<p>So, comparing this one to the ID property of the <code>Get-AzExpressRouteCircuit</code> command would give me the desired connection we need to delete. Bingo! Let&rsquo;s write some code.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="k">function</span> <span class="nb">Remove-ERConnection</span> <span class="p">{</span>
+    <span class="p">[</span><span class="k">CmdletBinding</span><span class="p">()]</span>
+    <span class="k">param</span> <span class="p">(</span>
+        <span class="c"># ExpressRoute Circuit Name</span>
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$ExpressRouteCircuitName</span>
+    <span class="p">)</span>
+    <span class="k">begin</span> <span class="p">{</span>
+        <span class="nv">$ERCircuit</span> <span class="p">=</span> <span class="nb">Get-AzExpressRouteCircuit</span> <span class="n">-Name</span> <span class="nv">$ExpressRouteCircuitName</span>
+        <span class="nv">$ERCircuitId</span> <span class="p">=</span> <span class="nv">$ERCircuit</span><span class="p">.</span><span class="n">Id</span>
+        <span class="nv">$RemovedConnections</span> <span class="p">=</span> <span class="p">@()</span>
+    <span class="p">}</span>
+    <span class="k">process</span> <span class="p">{</span>
+        <span class="nv">$Connections</span> <span class="p">=</span> <span class="nb">Get-AzVirtualNetworkGatewayConnection</span> <span class="n">-Name</span> <span class="p">*</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;RGName&#39;</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$connection</span> <span class="k">in</span> <span class="nv">$Connections</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$connection</span><span class="p">.</span><span class="n">PeerText</span> <span class="o">-match</span> <span class="nv">$ERCircuitId</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nb">Write-Output</span> <span class="s2">&#34;Ready to delete connection: &#34;</span> <span class="nv">$connection</span><span class="p">.</span><span class="n">Name</span>
+                <span class="nb">Remove-AzVirtualNetworkGatewayConnection</span> <span class="n">-Name</span> <span class="nv">$connection</span><span class="p">.</span><span class="n">Name</span> <span class="n">-ResourceGroupName</span> <span class="s1">&#39;RGName&#39;</span> <span class="n">-Force</span> <span class="n">-WhatIf</span>
+                <span class="nv">$RemovedConnections</span> <span class="p">+=</span> <span class="nv">$connection</span><span class="p">.</span><span class="n">Name</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">end</span> <span class="p">{</span>
+        <span class="k">Return</span> <span class="nv">$RemovedConnections</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>There it is. We deleted our connection.</p>
+<p>Unfortunately, this &lsquo;resolution&rsquo; brought more questions. You might notice that we had to pass the Resource Group name for both Get and Remove-AzVirtualNetworkGatewayConnection commands. That is not something you want to hard-code and we are not passing that in our pipeline. Also, what if we had multiple connections to the circuit within different Virtual Network Gateways (that are in different RGs)?</p>
+<p>The only way we could solve it using PowerShell was to put all Resource Groups in one variable and then iterate through each one of them searching for connections.</p>
+<p>This was unacceptable because it would be time-consuming and just not good practice.</p>
+<p>Back to the drawing board. Would you like to know how I solved it at the end? Stay tuned for the next post 😉</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-02-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/azure-expressroute-reconfiguration-vol1/index.md" target="_blank" rel="noopener noreferrer">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/" data-title="Azure ExpressRoute Reconfiguration Vol1" data-via="MilosKatinski" data-hashtags="Azure,Networking"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/"><i class="fab fa-reddit fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/azure/">Azure</a>,&nbsp;<a href="/tags/networking/">Networking</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/how-to-secure-your-network/" class="prev" rel="prev" title="How-to-Secure-Your-Network"><i class="fas fa-angle-left fa-fw"></i>How-to-Secure-Your-Network</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank" rel="noopener noreferrer">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":0},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-64641779-2', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-64641779-2" async></script></body>
+</html>

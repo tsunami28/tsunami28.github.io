@@ -14,7 +14,7 @@
                 <img src="/images/Mighty_Azure_portal_vol2/featured-image.webp" referrerpolicy="no-referrer">
             </div><p>Providing good billing overview and reports for customers through CSP is still not fully integrated in either MSP or Azure portal. That&rsquo;s why most providers use 3rd party solutions.
 Browsing through one of those for a client I noticed strange reports for a month or two. 
-We implemented Azure SQL with Elastic Pool. Great thing with EP is that you pay just for selected DTU and you may create <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/resource-limits-dtu-elastic-pools" target="_blank" rel="noopener noreffer">&ldquo;unlimited&rdquo;</a> number of databases. But, if you create a new database and don&rsquo;t add it to the pool, it will be billed separately.</p>]]></description>
+We implemented Azure SQL with Elastic Pool. Great thing with EP is that you pay just for selected DTU and you may create <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/resource-limits-dtu-elastic-pools" target="_blank" rel="noopener noreferrer">&ldquo;unlimited&rdquo;</a> number of databases. But, if you create a new database and don&rsquo;t add it to the pool, it will be billed separately.</p>]]></description>
 </item><item>
     <title>SQL-Horror-Story-Part2</title>
     <link>https://doctorsolution.xyz/sql-horror-story-part2/</link>
@@ -23,7 +23,7 @@ We implemented Azure SQL with Elastic Pool. Great thing with EP is that you pay 
     <guid>https://doctorsolution.xyz/sql-horror-story-part2/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/SQL-Horror-Story-part2/featured-image.webp" referrerpolicy="no-referrer">
-            </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
+            </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreferrer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
 </item><item>
     <title>SQL Horror Story</title>
     <link>https://doctorsolution.xyz/sql-horror-story/</link>
@@ -33,7 +33,7 @@ We implemented Azure SQL with Elastic Pool. Great thing with EP is that you pay 
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/SQL-Horror-Story/featured-image.webp" referrerpolicy="no-referrer">
             </div><p>For the past 8 months I&rsquo;ve been working on an Azure project for a financial institution. I&rsquo;ve never imagined so many security and compliancy checks. The team did a great job - we passed all advisory scans with high grades and were ready to go live in a couple of days.</p>
-<p>Important part of the infrastructure was relying on <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview" target="_blank" rel="noopener noreffer">Azure SQL</a>.
+<p>Important part of the infrastructure was relying on <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview" target="_blank" rel="noopener noreferrer">Azure SQL</a>.
 Monday morning. I&rsquo;ve made myself a cup of coffee and logged in to the portal and systems to do a base check once again. And this is where our story begins.</p>]]></description>
 </item></channel>
 </rss>

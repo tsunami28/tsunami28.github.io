@@ -1,9 +1,10 @@
 # How-to-Secure-Your-Network
 
-{{< figure src="/images/How-To-Secure-Your-Network/Azure-Virtual-Network-smaller.png" width="30%" >}}
-
 Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.
 <!--more-->
+
+{{< figure src="/images/How-To-Secure-Your-Network/Azure-Virtual-Network-smaller.png" width="30%" >}}
+
 Let's start with building the initial services we need for this POC:
 1. Resource group for our POC (consider everything below to be created inside this RG)
 2. Virtual network with 2 subnets (one will be used for VM and the other one later on for Private Endpoint)

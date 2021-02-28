@@ -4,17 +4,20 @@
         <link>https://doctorsolution.xyz/categories/how-to-configure/</link>
         <description>How to configure - Category - Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/how-to-configure/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 28 Jan 2021 15:00:00 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/how-to-configure/" rel="self" type="application/rss+xml" /><item>
+    <title>Azure ExpressRoute Reconfiguration Vol1</title>
+    <link>https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/</link>
+    <pubDate>Thu, 28 Jan 2021 15:00:00 &#43;0100</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/</guid>
+    <description><![CDATA[<p>Recently I was working on an assignment, that at the start seemed like an easy one. We had to redeploy ExpressRoute Circuit which required that we first remove all the connections towards that Circuit. An important thing to mention is that all is done via Azure DevOps release pipelines and that the parameter we had to use is the circuit name.</p>]]></description>
+</item><item>
     <title>How-to-Secure-Your-Network</title>
     <link>https://doctorsolution.xyz/how-to-secure-your-network/</link>
     <pubDate>Thu, 19 Nov 2020 10:40:59 &#43;0100</pubDate>
     <author>Author</author>
     <guid>https://doctorsolution.xyz/how-to-secure-your-network/</guid>
-    <description><![CDATA[<figure>
-     
-</figure>
-
-<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
+    <description><![CDATA[<p>Lately I came accross a lot of unsecurity and even knowledge lack about how to secure your Azure networking communication. Based on the example I will showcase you differences between no security and using Service or Private Endpoints.</p>]]></description>
 </item><item>
     <title>SQL-Horror-Story-Part2</title>
     <link>https://doctorsolution.xyz/sql-horror-story-part2/</link>
@@ -23,7 +26,7 @@
     <guid>https://doctorsolution.xyz/sql-horror-story-part2/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/SQL-Horror-Story-part2/featured-image.webp" referrerpolicy="no-referrer">
-            </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
+            </div><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreferrer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>]]></description>
 </item><item>
     <title>Mighty Azure portal vol1</title>
     <link>https://doctorsolution.xyz/mighty_azure_portal_vol1/</link>

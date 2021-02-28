@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>SQL-Horror-Story-Part2 - Doctor Solution</title><meta name="Description" content=""><meta property="og:title" content="SQL-Horror-Story-Part2" />
+        <title>SQL-Horror-Story-Part2 - Doctor Solution</title><meta name="description" content=""><meta property="og:title" content="SQL-Horror-Story-Part2" />
 <meta property="og:description" content="Hopefully you didn&rsquo;t recognize yourself in my previous post. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://doctorsolution.xyz/sql-horror-story-part2/" />
-<meta property="og:image" content="https://doctorsolution.xyz/images/SQL-Horror-Story-part2/featured-image.webp" />
-<meta property="article:published_time" content="2020-08-26T09:26:50+02:00" />
-<meta property="article:modified_time" content="2020-08-26T11:40:47+02:00" />
+<meta property="og:url" content="https://doctorsolution.xyz/sql-horror-story-part2/" /><meta property="og:image" content="https://doctorsolution.xyz/images/SQL-Horror-Story-part2/featured-image.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-26T09:26:50&#43;02:00" />
+<meta property="article:modified_time" content="2020-08-26T11:40:47&#43;02:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://doctorsolution.xyz/images/SQL-Horror-Story-part2/featured-image.webp"/>
 
@@ -78,7 +78,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SQL-Horror-Story-Part2</h1><h2 class="single-subtitle">chapter two</h2><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreferrer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-26">2020-08-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;591 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
@@ -94,7 +94,7 @@
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreffer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>
+            </div><div class="content" id="content"><p>Hopefully you didn&rsquo;t recognize yourself in my previous <a href="https://doctorsolution.xyz/sql-horror-story/" target="_blank" rel="noopener noreferrer">post</a>. After we cooled off our heads we started thinking about the solution/workaround because, once again, client was not yet ready to invest in HA solution.</p>
 <p>As it was a future Production environment we had implemented LTR backups on all databases (and off course PiTR backups are there by default).
 With this knowing our first idea was to do a restore of a LTR backup to a different working server and to change config files in app - maximum downtime of an hour.</p>
 <p>PowerShell to the rescue :)</p>
@@ -149,7 +149,7 @@ With this knowing our first idea was to do a restore of a LTR backup to a differ
 </code></pre></td></tr></table>
 </div>
 </div><p>This procedure worked, but we had just one issue with it - LTR backups were &ldquo;old&rdquo; - 1 to 7 days and since it was a CMS in case, this data lose was unacceptable.</p>
-<p>Easy, we thought. If we can restore LTRs we should be able to restore PiTR backups too. Looking at the procedure <a href="https://docs.microsoft.com/en-us/powershell/module/az.sql/restore-azsqldatabase?view=azps-4.6.0" target="_blank" rel="noopener noreffer">here</a> it looked pretty strait forward (only that &ldquo;UTCDateTime&rdquo; bugged me a bit).</p>
+<p>Easy, we thought. If we can restore LTRs we should be able to restore PiTR backups too. Looking at the procedure <a href="https://docs.microsoft.com/en-us/powershell/module/az.sql/restore-azsqldatabase?view=azps-4.6.0" target="_blank" rel="noopener noreferrer">here</a> it looked pretty strait forward (only that &ldquo;UTCDateTime&rdquo; bugged me a bit).</p>
 <p>So, we tried this.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -189,7 +189,7 @@ After a lot of reading and combining information from different places I found o
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/sql-horror-story-part2/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/sql-horror-story-part2/index.md" target="_blank" rel="noopener noreferrer">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://doctorsolution.xyz/sql-horror-story-part2/" data-title="SQL-Horror-Story-Part2" data-via="MilosKatinski" data-hashtags="Azure,SQL,PowerShell"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://doctorsolution.xyz/sql-horror-story-part2/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://doctorsolution.xyz/sql-horror-story-part2/"><i class="fab fa-reddit fa-fw"></i></a></span>
@@ -209,8 +209,8 @@ After a lot of reading and combining information from different places I found o
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank" rel="noopener noreferrer">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

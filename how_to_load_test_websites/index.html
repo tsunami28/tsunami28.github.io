@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>How to load test websites? - Doctor Solution</title><meta name="Description" content="Get ready for Black Friday"><meta property="og:title" content="How to load test websites?" />
+        <title>How to load test websites? - Doctor Solution</title><meta name="description" content="Get ready for Black Friday"><meta property="og:title" content="How to load test websites?" />
 <meta property="og:description" content="Get ready for Black Friday" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://doctorsolution.xyz/how_to_load_test_websites/" />
-<meta property="og:image" content="https://doctorsolution.xyz/images/How_to_load_test_websites/featured-image.webp" />
-<meta property="article:published_time" content="2019-10-20T02:13:00+02:00" />
-<meta property="article:modified_time" content="2020-05-09T23:46:07+02:00" />
+<meta property="og:url" content="https://doctorsolution.xyz/how_to_load_test_websites/" /><meta property="og:image" content="https://doctorsolution.xyz/images/How_to_load_test_websites/featured-image.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-10-20T02:13:00&#43;02:00" />
+<meta property="article:modified_time" content="2020-05-09T23:46:07&#43;02:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://doctorsolution.xyz/images/How_to_load_test_websites/featured-image.webp"/>
 
@@ -78,7 +78,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">How to load test websites?</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="https://doctorsolution.xyz" title="Author" target="_blank" rel="noopener noreferrer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Milos Katinski</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tips-and-tricks/"><i class="far fa-folder fa-fw"></i>Tips and Tricks</a>&nbsp;<a href="/categories/azure/"><i class="far fa-folder fa-fw"></i>Azure</a>&nbsp;<a href="/categories/how-to-configure/"><i class="far fa-folder fa-fw"></i>How to configure</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-10-20">2019-10-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;474 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
@@ -98,9 +98,9 @@
 <p>Does your company care about their website? Do you have clients that are doing business over their websites? Are you ready for the upcoming Black Friday?</p>
 <p>At this moment you should pay attention if your website and infrastructure behind it are ready to endure.</p>
 <p>Among all the great commercial tools lies the jewel which is free :) The solution that I will present in the next few lines can be run from your local workstation (we have decided to take it to the cloud).</p>
-<p>I&rsquo;m presenting you <a href="https://gettaurus.org/" target="_blank" rel="noopener noreffer">Taurus</a>. We have used this tool with JMeter scripts to accomplish our goal.</p>
+<p>I&rsquo;m presenting you <a href="https://gettaurus.org/" target="_blank" rel="noopener noreferrer">Taurus</a>. We have used this tool with JMeter scripts to accomplish our goal.</p>
 <p>Since we decided to run everything in the cloud (Azure) we needed a Linux VM that will host our project. We went with CentOS 7.</p>
-<p>As we are using it in some other projects, we decided to go with a <a href="https://hub.docker.com/r/blazemeter/taurus/" target="_blank" rel="noopener noreffer">Docker version</a>. So, after installing Linux, you need to install Docker and grab the Taurus image.</p>
+<p>As we are using it in some other projects, we decided to go with a <a href="https://hub.docker.com/r/blazemeter/taurus/" target="_blank" rel="noopener noreferrer">Docker version</a>. So, after installing Linux, you need to install Docker and grab the Taurus image.</p>
 <p>Since I wanted to use scripts that were uploaded locally, I had to mount a specific folder during the Docker run. At that point, I found out that I have an issue with rights on it. After a short search, I found an old friend to be a problem - SELinux. You can play with giving certain rights, but I just &ldquo;kill&rdquo; it.</p>
 <p>What would be the use of a test if we couldn&rsquo;t create a report? Well, JMeter has a built-in function for creating very nice HTML reports, but in the local folder. Since this is run in Docker, we needed to find a way to extract the report. Yes, I know I already mounted Linux local folder, but I don&rsquo;t want to SSH to it to grab it and it also gets powered off after a test (automatically). This is where we decided to mount one more thing - Azure Storage File Share.</p>
 <p>Mount Azure File Share in Linux -&gt; <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mount-azure-file-storage-on-linux-using-smb">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mount-azure-file-storage-on-linux-using-smb</a></p>
@@ -135,7 +135,7 @@ sudo mount -t cifs //StorageAccountName.file.core.windows.net/FileShareName /hom
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/how_to_load_test_websites/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/how_to_load_test_websites/index.md" target="_blank" rel="noopener noreferrer">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://doctorsolution.xyz/how_to_load_test_websites/" data-title="How to load test websites?" data-via="MilosKatinski" data-hashtags="Azure,Docker,IIS,Load Test"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://doctorsolution.xyz/how_to_load_test_websites/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://doctorsolution.xyz/how_to_load_test_websites/"><i class="fab fa-reddit fa-fw"></i></a></span>
@@ -155,8 +155,8 @@ sudo mount -t cifs //StorageAccountName.file.core.windows.net/FileShareName /hom
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://doctorsolution.xyz/" target="_blank" rel="noopener noreferrer">Milos Katinski</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
