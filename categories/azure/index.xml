@@ -4,7 +4,14 @@
         <link>https://doctorsolution.xyz/categories/azure/</link>
         <description>Azure - Category - Doctor Solution</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>milos.katinski@outlook.com (Milos Katinski)</managingEditor>
-            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Thu, 28 Jan 2021 15:00:00 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/azure/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>milos.katinski@outlook.com (Milos Katinski)</webMaster><lastBuildDate>Sun, 14 Mar 2021 17:30:00 &#43;0100</lastBuildDate><atom:link href="https://doctorsolution.xyz/categories/azure/" rel="self" type="application/rss+xml" /><item>
+    <title>Azure-ExpressRoute-Reconfiguration-Vol2</title>
+    <link>https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol2/</link>
+    <pubDate>Sun, 14 Mar 2021 17:30:00 &#43;0100</pubDate>
+    <author>Author</author>
+    <guid>https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol2/</guid>
+    <description><![CDATA[<p>In the previous <a href="https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/" target="_blank" rel="noopener noreferrer">post</a> I described the approach to remove specific ExpressRoute VirtualNetworkGateway connections, solely using the PowerShell basic commands. As mentioned, that did not serve our purpose.</p>]]></description>
+</item><item>
     <title>Azure ExpressRoute Reconfiguration Vol1</title>
     <link>https://doctorsolution.xyz/azure-expressroute-reconfiguration-vol1/</link>
     <pubDate>Thu, 28 Jan 2021 15:00:00 &#43;0100</pubDate>
