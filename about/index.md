@@ -3,7 +3,8 @@
 
 Welcome Cloud adventurer!
 
-My name is Milos Katinski, from Belgrade, Serbia. I am here to share with you all my hard times and successful findings.
+My name is Milos Katinski, from Belgrade, Serbia. Oh well, journey through the Clouds brought me to the Amsterdam, Netherlands.
+I am here to share with you all my hard times and successful findings.
 
 I am an Azure Solutions Engineer with years of experience in the IT industry, with a current
 focus on Azure Cloud and DevOps culture. Within years of exploring and working in various
